@@ -13,7 +13,7 @@ if app_mode=='Analyze':
         data = bytes_data.decode("utf-8")
         # st.text(data)
         df = pre.preprocess(data)
-        # st.dataframe(df)
+        st.dataframe(df)
         # extract unique users
         user_list = df['user'].unique().tolist()
         user_list.remove("group_notification")

@@ -21,24 +21,24 @@ if app_mode=='Analyze':
         user_list.insert(0, "Overall")
         selected_user = st.sidebar.selectbox("Show Analysis Wrt ", user_list)
         st.title("Top Stats")
-        if st.sidebar.button("Show Analysis"):
-            num_messages, words, num_media_msg, num_links = helper.fetch_stats(selected_user, df)
-            overall_sentiment = helper.print_final_sentiment(df)
-            # st.title(overall_sentiment)
-            st.sidebar.title(overall_sentiment)
-            col1, col2, col3, col4 = st.columns(4)
-            with col1:
-                st.header("Total Mesaages")
-                st.title(num_messages)
-            with col2:
-                st.header("Total Words")
-                st.title(words)
-            with col3:
-                st.header("Total Media Msg")
-                st.title(num_media_msg)
-            with col4:
-                st.header("Links Shared")
-                st.title(num_links)
+        # if st.sidebar.button("Show Analysis"):
+        #     num_messages, words, num_media_msg, num_links = helper.fetch_stats(selected_user, df)
+        #     overall_sentiment = helper.print_final_sentiment(df)
+        #     # st.title(overall_sentiment)
+        #     st.sidebar.title(overall_sentiment)
+        #     col1, col2, col3, col4 = st.columns(4)
+        #     with col1:
+        #         st.header("Total Mesaages")
+        #         st.title(num_messages)
+        #     with col2:
+        #         st.header("Total Words")
+        #         st.title(words)
+        #     with col3:
+        #         st.header("Total Media Msg")
+        #         st.title(num_media_msg)
+        #     with col4:
+        #         st.header("Links Shared")
+        #         st.title(num_links)
 
         # Timeline
         st.title("Monthly Timeline Analysis")
